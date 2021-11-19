@@ -38,3 +38,17 @@ check in Device Manager if you are not sure.<br/>
 
 # usage 🚀
 launch pttpy.bat (this will activate the venv and run the script)
+
+# what to expect 🤷‍♀️
+whenever a ptt command is sent by a 3rd party program (Tx or Rx),<br/>
+OmniRig sends the command defined in pttpy.ini to the virtual COM port we set.<br/>
+the script receives the command and set RTS to the physical COM port of the computer-radio interface,>br/>
+and it also logs to the cmd window.
+
+# acknowledgments 🎁
+- Irad 4Z1AC for developing VarAC (https://www.varac-hamradio.com/)
+- Avishay 4X1ZQ for trying to play with VarAC on a non-CAT radio which created the need
+- Gadi 4X6AG for discussing the technical issues and suggesting alternatives
+
+73<br/>
+Gil 4Z1KD
