@@ -44,7 +44,8 @@ if __name__ == "__main__":
     ser = serial.Serial("COM8") #this is the actual port of the computer-radio interface
     ser.setRTS(False)
 
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     coro = serial_asyncio.create_serial_connection(loop, Output, "COM7", baudrate=38400) #this is the virtual port where 3rd party apps send the command
     loop.run_until_complete(coro)
     loop.run_forever()
