@@ -1,4 +1,4 @@
-# ptt-py
+# ptt-py 🌺
 A ptt script for 3rd party applications that use Omni-Rig on non-CAT radios
 
 # prerequisite 🖐️
@@ -11,5 +11,5 @@ A ptt script for 3rd party applications that use Omni-Rig on non-CAT radios
 2. activate the venv (Scripts\activate.bat)
 3. install the requirements (pip install -r requirements.txt)
 
-# usage
+# usage 🚀
 1. execute pttpy.bat (this will activate the venv and run the script)
