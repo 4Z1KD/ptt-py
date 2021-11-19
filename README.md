@@ -43,7 +43,8 @@ launch pttpy.bat (this will activate the venv and run the script)
 whenever a ptt command is sent by a 3rd party program (Tx or Rx),<br/>
 OmniRig sends the command defined in pttpy.ini to the virtual COM port we set.<br/>
 the script receives the command and set RTS to the physical COM port of the computer-radio interface,<br/>
-and it also logs to the cmd window.
+and it also logs to the cmd window.<br/>
+![image](https://user-images.githubusercontent.com/24712835/142703541-0ca03cc4-7175-4fd5-81a2-ab9c25cc4bdd.png)
 
 # acknowledgments 🎁
 - Irad 4Z1AC for developing VarAC (https://www.varac-hamradio.com/)
