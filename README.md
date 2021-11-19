@@ -22,7 +22,7 @@ A ptt script for 3rd party applications that use OmniRig on non-CAT radios 📻
 # usage 🚀
 launch* pttpy.bat (this will activate the venv and run the script)
 
-* *Before you launce the script, make sure to set the correct COM ports
+\*Before you launce the script, make sure to set the correct COM ports
 ```python
 if __name__ == "__main__":
     global ser
