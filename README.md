@@ -19,7 +19,7 @@ A ptt script for 3rd party applications that use OmniRig on non-CAT radios 📻
 ## OmniRig settings
 ![image](https://user-images.githubusercontent.com/24712835/142699149-1be7c6e8-95b4-41cb-8b21-914affde394f.png)
 
-# final touch 🪄
+# final touch 🧙‍♂️
 make sure to set the correct COM ports.<br/> 
 ```python
 if __name__ == "__main__":
