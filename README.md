@@ -13,10 +13,10 @@ A ptt script for 3rd party applications that use OmniRig on non-CAT radios 📻
 4. install the requirements (pip install -r requirements.txt) 🧰
 5. copy Pttpy.ini to OmniRig's rigs directory (usually @ C:\Program Files (x86)\Afreet\OmniRig\Rigs) 📂
 
-## com0com setup
+## com0com setup 🔩
 ![image](https://user-images.githubusercontent.com/24712835/142699060-38d166e6-a6da-4b88-a946-c503939074b9.png)
 
-## OmniRig settings
+## OmniRig settings ⚙️
 ![image](https://user-images.githubusercontent.com/24712835/142699149-1be7c6e8-95b4-41cb-8b21-914affde394f.png)
 
 # final touch 🧙‍♂️
