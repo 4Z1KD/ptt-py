@@ -14,4 +14,4 @@ A ptt script for 3rd party applications that use Omni-Rig on non-CAT radios
 5. copy Pttpy.ini to omni-rig's rig directory (usually @ C:\Program Files (x86)\Afreet\OmniRig\Rigs) 📂
 
 # usage 🚀
-1. execute pttpy.bat (this will activate the venv and run the script)
+1. launch pttpy.bat (this will activate the venv and run the script)
