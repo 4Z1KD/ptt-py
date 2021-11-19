@@ -50,5 +50,5 @@ and it also logs to the cmd window.
 - Avishay 4X1ZQ for trying to play with VarAC on a non-CAT radio which created the need
 - Gadi 4X6AG for discussing the technical issues and suggesting alternatives
 
-73<br/>
+73,<br/>
 Gil 4Z1KD
