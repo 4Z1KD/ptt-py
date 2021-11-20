@@ -51,7 +51,7 @@ if __name__ == "__main__":
     physical_port = config['interface']['physical_port']
 
     global ser
-    ser = serial.Serial(port=physical_port, baudrate=9600, timeout=None, xonxoff=False, rtscts=True, write_timeout=None, dsrdtr=True, inter_byte_timeout=None) #this is the actual port of the computer-radio interface
+    ser = serial.Serial(port=physical_port, baudrate=9600, timeout=None, xonxoff=False, rtscts=False, write_timeout=None, dsrdtr=False, inter_byte_timeout=None) #this is the actual port of the computer-radio interface
     ser.rts = False
     ser.dtr = False
 
