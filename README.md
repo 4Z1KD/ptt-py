@@ -19,19 +19,12 @@ A ptt script for 3rd party applications that use OmniRig on non-CAT radios 📻
 ## OmniRig settings ⚙️
 ![image](https://user-images.githubusercontent.com/24712835/142699149-1be7c6e8-95b4-41cb-8b21-914affde394f.png)
 
-# final touch ✏️
-make sure to set the correct COM ports.<br/> 
+## com ports ✏️
+make sure to set the correct COM ports in pttpy.cfg<br/> 
 ```python
-if __name__ == "__main__":
-    global ser
-    ser = serial.Serial("COM8") #this is the actual port of the computer-radio interface
-    ser.setRTS(False)
-
-    loop = asyncio.get_event_loop()
-    coro = serial_asyncio.create_serial_connection(loop, Output, "COM7", baudrate=38400) #this is the virtual port where 3rd party apps send the command
-    loop.run_until_complete(coro)
-    loop.run_forever()
-    loop.close()
+[interface]
+virtual_port = COM7
+physical_port = COM8
 ```
 check in Device Manager if you are not sure.<br/>
 ![image](https://user-images.githubusercontent.com/24712835/142700304-cbc0b311-84b0-4297-a8ff-70b8d7e2a043.png)
