@@ -3,6 +3,7 @@ import asyncio
 import serial
 import serial_asyncio
 import sys
+import configparser
 
 def log(msg):
     t = time.localtime()
@@ -40,13 +41,21 @@ class Output(asyncio.Protocol):
         log("resume writing")
 
 if __name__ == "__main__":
+    #read config file
+    config = configparser.ConfigParser()
+    configFilePath = r'pttpy.cfg'
+    config.read(configFilePath)
+    virtual_port = config['interface']['virtual_port']
+    physical_port = config['interface']['physical_port']
+
     global ser
-    ser = serial.Serial("COM8") #this is the actual port of the computer-radio interface
+    ser = serial.Serial(physical_port) #this is the actual port of the computer-radio interface
     ser.setRTS(False)
 
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    coro = serial_asyncio.create_serial_connection(loop, Output, "COM7", baudrate=38400) #this is the virtual port where 3rd party apps send the command
+    #loop = asyncio.get_event_loop()
+    coro = serial_asyncio.create_serial_connection(loop, Output, virtual_port, baudrate=38400) #this is the virtual port where 3rd party apps send the command
     loop.run_until_complete(coro)
     loop.run_forever()
     loop.close()
