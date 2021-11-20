@@ -19,10 +19,12 @@ class Output(asyncio.Protocol):
     def data_received(self, data):
         #print("data received", repr(data))
         if data == b"on":
-            ser.setRTS(True)
+            ser.rts = True
+            ser.dtr = True
             log("transmitting...")
         elif data == b"off":
-            ser.setRTS(False)
+            ser.rts = False
+            ser.dtr = False
             log("receiving...")
         if b"\n" in data:
             log("closing...")
@@ -49,8 +51,9 @@ if __name__ == "__main__":
     physical_port = config['interface']['physical_port']
 
     global ser
-    ser = serial.Serial(physical_port) #this is the actual port of the computer-radio interface
-    ser.setRTS(False)
+    ser = serial.Serial(port=physical_port, baudrate=9600, timeout=None, xonxoff=False, rtscts=True, write_timeout=None, dsrdtr=True, inter_byte_timeout=None) #this is the actual port of the computer-radio interface
+    ser.rts = False
+    ser.dtr = False
 
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
